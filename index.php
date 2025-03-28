@@ -1,3 +1,9 @@
+<?php
+// Connect with Database
+session_start();
+include("databaseconn.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,13 +92,14 @@
                       <div class="row">
                           <div class="col-sm-12 " id="modal1-1">
                            <form>
-                              <i class="fa-solid fa-robot"></i>
-                              <input type="text" placeholder="User Name " class="col-sm-12 mb-3">
-                              <input type="password" placeholder="Password" class="col-sm-12 mb-3">
+                              <i class="fa-solid fa-robot"></i> <br>
+                              <!-- <input type="text" placeholder="User Name " class="col-sm-12 mb-3">
+                              <input type="password" placeholder="Password" class="col-sm-12 mb-3"> -->
+                              <a href="userLOGIN.html" class="text-center model-login"> Are You A User ?</a> <br> <h3>OR</h3> <br>
                            </form>
+
                            <div class="modal-footer">
-                              <button class="btn login-btn col-sm-12 mb-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"> Log In</button>
-                              <a href="#" class="text-center" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"> Are You A Consultant?Register</a>
+                              <a href="expertLOGIN.html" class="text-center" > Are You A Consultant?</a>
                           </div>
                           </div>
                       </div>
@@ -100,98 +107,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="container">
-                      <div class="row">
-                          <div class="col-lg-12" id="done-modal">
-                              <i class="fa-regular fa-circle-check"></i>
-                              <h3>Registration completed successfully</h3>
-                              <p>Please check your inbox on your email to find details about the Meetings, and the schedule.</p>
-                              <div class="modal-footer col-sm-12">
-                                  <button class="btn login-btn" data-bs-toggle="modal">Okey,Got It</button>
-                                </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+            </div>              
           </div>
-          <div class="d-flex " role="search">
-            <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <!-- <h1>Log In</h1> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                     <div class="container-fluid">
-                      <div class="d-flex">
-                          <div class="col-sm-12 " id="modal1-1">
-                           <form>
-                              <i class="fa-solid fa-robot"></i>
-                              <div class="d-lg-flex d-sm-inline  justify-content-between" id="consult-input">
-                              <input type="text" placeholder=" Name " class=" mb-3">
-                              <input type="number" placeholder=" National ID " class=" mb-3">
-                            </div>
-                            <div class="d-lg-flex d-sm-inline  justify-content-between" id="consult-input">
-                              <input type="text" placeholder=" Phone " class="col-lg-6 col-sm-12 mb-3">
-                              <input type="text" placeholder="Address " class="col-lg-6 col-sm-12 mb-3">
-                            </div>
-                            <div class="d-lg-flex d-sm-inline  justify-content-between" id="consult-input">
-                              <input type="email" placeholder=" Linkedin " class="col-lg-6 col-sm-12 mb-3">
-                              <input type="email" placeholder="Email" class=" col-lg-6 col-sm-12 mb-3">
-                            </div>
-                            <div class="d-lg-flex d-sm-inline  justify-content-between" id="consult-input">
-                              <label class=" justify-content-center">Uploud Your CV</label>
-                              <input type="file" class=" col-lg-6 col-sm-12 mb-3">
-                              </div>
-                           </form>
-                           <div class="modal-footer">
-                              <button class="btn login-btn col-sm-12 mb-3" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"> Registration</button>
-                          </div>
-                          </div>
-                      </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="container">
-                      <div class="row">
-                          <div class="col-lg-12" id="done-modal">
-                              <i class="fa-regular fa-circle-check"></i>
-                              <h3>Registration completed successfully</h3>
-                              <p>We'll check the info and get back to you.</p>
-                              <div class="modal-footer col-sm-12">
-                                  <button class="btn login-btn" data-bs-toggle="modal">Okey,Got It</button>
-                                </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
+
 
           <div class="caption">
             <p>"Our AI-powered platform provides expert technology consultations, helping you navigate the latest innovations with ease."
@@ -204,7 +122,7 @@
           
               <div class="d-lg-flex d-sm-block" id="row-1">
                 <div class="col-lg-4 col-sm-10 ai-box"><a href="#"><i class="fa-solid fa-brain"></i><br>AI Tools</a> </div>
-                <div class="col-lg-4 col-sm-10 ai-box"><a href="#"><i class="fa-brands fa-windows"></i><br>Microsoft Office</a> </div>
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="innermiroc.html"><i class="fa-brands fa-windows"></i><br>Microsoft Office</a> </div>
                 <div class="col-lg-4 col-sm-10 ai-box"><a href="#"><i class="fa-solid fa-magnifying-glass-chart"></i><br>System Analysis</a> </div>
               </div>
 

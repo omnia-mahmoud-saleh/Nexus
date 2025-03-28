@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribtion</title>
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/icons/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="img-sub">
+                    <img src="./assets/img/robot.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="back-home">
+                    <a href="index.php"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+
+                <div class="container-header">
+                    <h1>Get In Touch</h1>
+                </div>
+                <section class="sub-input">
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Your Name" class="col-lg-6">
+                        <input type="email" placeholder="Your Email" class="col-lg-6">
+                        <input type="number" placeholder="Your Phone" class="col-lg-6">
+
+                        <h2 class="pay-h2 mt-4">Payment Info</h2>
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Cardholder Name" required>
+                        </div>
+            
+                        <div class="input-group">
+                            <input type="text" id="card-number" placeholder="Card Number" maxlength="19" required>
+                        </div>
+            
+                        <div class="input-row">
+                            <div class="input-group">
+                                <input type="text" id="expiry" placeholder="Expiry Date :MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                            </div>
+                            <button type="submit" class="pay-btn sub-button">Subscribe</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
