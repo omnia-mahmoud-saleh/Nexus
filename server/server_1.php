@@ -1,8 +1,8 @@
 <?php include('databaseconn.php')?>
 <?php
     //Registration button Expert
-    if(isset($_POST['button_submit_expert'])){
-        //Input santization
+    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['button_submit_expert'])){
+        //Input sanitization
         $expert_name = filter_input(INPUT_POST, "expert_name", FILTER_SANITIZE_SPECIAL_CHARS);
         $national_id = filter_input(INPUT_POST, "national_id", FILTER_SANITIZE_SPECIAL_CHARS);
         $expert_phone = filter_input(INPUT_POST, "expert_phone", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -62,7 +62,7 @@
 
 
     //Login button Expert
-    if(isset($_POST['button_login_expert'])){
+    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['button_login_expert'])){
         //Sanitizing inputs
         $expert_name = filter_input(INPUT_POST, "expert_name", FILTER_SANITIZE_SPECIAL_CHARS);
         $expert_password = filter_input(INPUT_POST, "expert_password", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -100,7 +100,7 @@
 
 
     //Registration button User
-    if(isset($_POST['register_button_user'])){
+    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register_button_user'])){
         //Input Sanitization
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $national_id = filter_input(INPUT_POST, "national_id", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -143,8 +143,8 @@
 
 
     //Button Login User
-    if(isset($_POST['button_login_user'])){
-        //Santize input
+    if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['button_login_user'])){
+        //Sanitize input
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $user_password = filter_input(INPUT_POST, "user_password", FILTER_SANITIZE_SPECIAL_CHARS);
         //Compare data with database
