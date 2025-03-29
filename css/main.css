@@ -187,12 +187,54 @@ form input::placeholder{
  /* end of login-modal */
 
 .caption{
-     margin: 140px 20px 0px 20px; 
-     font-family: "Playwrite IT Moderna", serif;
-    text-align: center;
+    background-image: url(../assets/img/home-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: 100vh;
+     width: 100%;
+     margin-top: 10px;
+}
+.cap{
+    width: 100%;
+    height: 100%;
+    background-color: #0000009a;
+}
+.cap .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cap .container p{
+    font-family: "Playwrite IT Moderna", serif;
     color: #AB7442;
     font-size: 25px;
     font-weight: bold;
+}
+.home-btn{
+    background-color: var(--maincolor);
+    color: white;
+    width: 150px;
+    border: 0px;
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 30%;
+    padding: 5px 0px;
+}
+@media(max-width:750px){
+    .caption{
+        margin: 0px;
+        background-image: url(../assets/img/home-responsive.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+         height: 100vh;
+         width: 100%;
+        
+         padding: 0px;
+    }
+    .cap .container p{
+        font-size: 20px;
+    }
 }
 
 /* ------------------------------------------------------ */

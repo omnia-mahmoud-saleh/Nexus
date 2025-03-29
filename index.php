@@ -109,12 +109,17 @@ include("databaseconn.php");
               </div>
             </div>              
           </div>
+        </div>
+    </div>
 
 
           <div class="caption">
-            <p>"Our AI-powered platform provides expert technology consultations, helping you navigate the latest innovations with ease."
-            <br> 
-            </p>
+            <div class="cap d-flex justify-content-center align-items-center">
+            <div class="container  d-flex flex-column justify-content-center align-items-center text-center ">
+                 <p> Our AI-powered platform provides expert technology consultations,<br> helping you navigate the latest innovations with ease.</p>
+                 <button class="home-btn"> EXPLORE NOW</button>
+              </div> 
+            </div>
           </div>
 
          <section class="sec-1">
