@@ -1,7 +1,7 @@
 <?php
     $user = "root";
     $server = "localhost";
-    $dbname = "ai-nexus";
+    $dbname = "ai_nexus";
     $dbpass = "";
 
     try{

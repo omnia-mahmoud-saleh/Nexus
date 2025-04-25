@@ -47,7 +47,7 @@
             //Notify User
             echo "<script>
                         alert('Profile has been successfully created.');
-                        window.location.href = '../index.php';
+                        window.location.href = '../index.html';
                     </script>";
                 exit();
         }
@@ -76,7 +76,7 @@
                 if(password_verify($expert_password, $stored_hash)){
                     echo "<script>
                         alert('Logged in Successfully');
-                        window.location.href = '../index.php';
+                        window.location.href = '../index.html';
                     </script>";
                 exit();
                 }
@@ -126,7 +126,7 @@
         if(mysqli_query($conn, $stmt)){
             echo "<script>
                         alert('Registration Successful');
-                        window.location.href = '../index.php';
+                        window.location.href = '../index.html';
                     </script>";
                 exit();
             //header("location: http://localhost/Grad_Project/Ai-Tools/userLOGIN.html");
@@ -156,7 +156,7 @@
                 if(password_verify($user_password, $stored_hash)){
                     echo "<script>
                         alert('Logged in Successfully');
-                        window.location.href = '../index.php';
+                        window.location.href = '../index.html';
                     </script>";
                 exit();
                 }
