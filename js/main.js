@@ -10,3 +10,4 @@ if(x > 100){
     firstDiv.style.display="block"
 }
 })
+  

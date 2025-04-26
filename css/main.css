@@ -82,15 +82,13 @@
 }
 #login{
     background-color: var(--maincolor);
+    color: white;
     padding: 13px;
     padding-left: 45px;
     padding-right: 45px;
     padding-bottom: 20px;
     height: 100%;
     margin-top: 0px !important;
-}
-#login a:hover{
-    color: white !important;
 }
 #login .nav-link{
     color: white;
@@ -242,13 +240,15 @@ form input::placeholder{
     margin-top: 50px;
 }
 #all-boxes{
-    margin-left: 10px;
+    width: 90%;
+    margin: auto;
+   
 }
 .ai-box{
-    background-color: #aa8058;
+    background-color:var(--maincolor);
     color: white;
     padding: 5px;
-    margin-left: 20px;
+    margin-right: 15px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
@@ -493,7 +493,7 @@ form input::placeholder{
 /* -----------------start subscribion page---------------------- */
 .img-sub img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -505,6 +505,10 @@ form input::placeholder{
 .container-header h1{
     font-size: 50px;
     font-weight: bold;
+}
+.pay-h2{
+    color:var(--maincolor);
+    margin-bottom:20px;
 }
 .sub-input input{
     width: 90%;
@@ -519,11 +523,17 @@ form input::placeholder{
 }
 .sub-button{
     margin-top: 20px;
-    width: 120px;
-    height: 50px;
-    border-radius: 10px;
+    width: 90%;
+    height: 55px;
+    border:0px;
+    border-radius:8px;
+    color:white;
     background-color: var(--maincolor);
-    font-size: 20px;
+    font-size: 22px;
+}
+.sub-button:hover{
+   background-color:#aa8058;
+   transition:all 1s;
 }
 /* --------------------------- end subscribtion page ------------------ */
 .back-home{
