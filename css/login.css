@@ -75,6 +75,10 @@ body{
 /* ---------------- end user registeration --------------------- */
 
 /* ---------------------- start expert login ----------------------- */
+.hero2{
+    margin-top: 25px;
+    margin-left: 30px;
+}
 .expert-img img{
     width: 37%;
     height: 80vh;
@@ -89,6 +93,10 @@ body{
 .log-expertlink{
     font-size: 25px;
     padding-bottom: 10px;
+}
+.log-expertlink a{
+    color: var(--maincolor);
+    padding-left: 5px; 
 }
 .regist2{
     margin-left: 50px;
@@ -106,6 +114,13 @@ body{
 }
 .cv-input{
     margin-left: 0px;
+    text-align: center;
+    font-size: 25px;
+}
+#cv input{
+    border-radius: 5px;
+    box-shadow:5px 4px 5px ;
+    height: 30px;
 }
 .back-home{
     margin-left: 15px;
@@ -116,4 +131,15 @@ body{
     font-size: 25px;
     padding-left: 10px;
     text-decoration: none;
+}
+#consult-input textarea{
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    height: 80px;
+    box-shadow: 5px 4px 5px;
+}
+#expert_discription, #availability{
+    width: 68%;
 }

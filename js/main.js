@@ -10,4 +10,35 @@ if(x > 100){
     firstDiv.style.display="block"
 }
 })
+
+
+
+  window.onload = function () {
+    const paymentBtn = document.getElementById("go-to-payment");
+    if (paymentBtn) {
+      paymentBtn.addEventListener("click", function () {
+        localStorage.setItem("redirectAfterLogin", "subscribe.html");
+        window.location.href = "experLOGIN.html";
+      });
+    }
+  
+    const loginForm = document.getElementById("user-loginPage");
+    if (loginForm) {
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        const redirectPage = localStorage.getItem("redirectAfterLogin");
+  
+        if (redirectPage) {
+          localStorage.removeItem("redirectAfterLogin");
+          window.location.href = redirectPage;
+        } 
+      });
+    }
+  };
+  
+
+
+
+
   
