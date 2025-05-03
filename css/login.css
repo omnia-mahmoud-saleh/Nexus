@@ -39,19 +39,22 @@ body{
     margin-left: 30px;
 }
 #user-loginPage button{
-    width: 30%;
-    border-radius: 10px;
+    width: 47%;
+    height: 50px;
+    border-radius: 8px;
     background-color: var(--maincolor);
     font-size: 25px;
     margin-left: 60px;
-    margin-top: 10px;
+    margin-top: 15px;
+    border: 0px;
+    box-shadow: 5px 4px 5px;
 }
 #user-loginPage a{
     padding-left: 60px;
     color: var(--maincolor);
 }
 .regist-link{
-    font-size: 20px;
+    font-size: 13px;
     padding-top: 10px;
 }
 /* -----------end user login------------------------ */

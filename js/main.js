@@ -18,7 +18,7 @@ if(x > 100){
     if (paymentBtn) {
       paymentBtn.addEventListener("click", function () {
         localStorage.setItem("redirectAfterLogin", "subscribe.html");
-        window.location.href = "experLOGIN.html";
+        window.location.href = "expertLOGIN.html";
       });
     }
   

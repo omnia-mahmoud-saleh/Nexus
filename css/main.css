@@ -64,13 +64,13 @@
 #navbarNavDropdown{
  justify-content: flex-end;
  font-weight: 400;
- font-size: 18px;
+ font-size: 19px;
  text-transform: uppercase;
  color: black;
  transition: all 1s;
 }
 .nav-item .nav-link:hover{
-    color: var(--maincolor) !important;
+    color: var(--maincolor) !important;          
 }
 .dropdown-item:hover{
     background-color: var(--maincolor);
@@ -95,6 +95,9 @@
 }
 #login .nav-link i{
     padding-left: 5px;
+}
+#login .nav-link:hover{
+    color: #000 !important;
 }
 @media(max-width:991px){
     .navbar{
@@ -242,7 +245,7 @@ form input::placeholder{
 #all-boxes{
     width: 90%;
     margin: auto;
-   
+    scroll-margin-top: 80px;  
 }
 .ai-box{
     background-color:var(--maincolor);
@@ -266,7 +269,6 @@ form input::placeholder{
 .ai-box a:hover{
     color: black;
     transition: all 0.8s;
-    font-size: 28px;
 }
 #row-1{
     margin-top: 20px;
