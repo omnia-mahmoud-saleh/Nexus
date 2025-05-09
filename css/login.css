@@ -146,3 +146,20 @@ body{
 #expert_discription, #availability{
     width: 68%;
 }
+/*----- Some Styling for the user-friendly notifications-----*/
+.alert {
+    padding: 15px;
+    margin: 10px auto;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert.error {
+    background-color: #f0e6bbfb;
+    color: #721c24;
+}

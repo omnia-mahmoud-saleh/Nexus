@@ -17,8 +17,8 @@ if(x > 100){
     const paymentBtn = document.getElementById("go-to-payment");
     if (paymentBtn) {
       paymentBtn.addEventListener("click", function () {
-        localStorage.setItem("redirectAfterLogin", "subscribe.html");
-        window.location.href = "expertLOGIN.html";
+        localStorage.setItem("redirectAfterLogin", "subscribe.php");
+        window.location.href = "expertLOGIN.php";
       });
     }
   

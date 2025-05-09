@@ -1,0 +1,66 @@
+Session [1]- 05-06
+Implementing Admin Page
+Done
+*Implementing log-in check before subscribtion
+
+#Created redirect_to_subscribe.php
+*We need a logout mechanism to clear the session variable.
+#Created logout.php
+
+[To be added: Log out button appears only when logged in [Done]
+
+To be added: Login should disappear after successful login [Done]
+
+To be added: Auto fill Username [Done]
+
+To be added: Redirecting messages [1 Done (To Login Page)]
+
+To be added: User-Friendly alerts
+]
+
+Session[2]: 05-07
+Changed index.html to index.php
+Changed all index.html to index.php
+* Added conditional login/logout links
+
+Changed subscribe.html to subscribe.php
+Changed all subscribe.html to subscribe.php
+* Added auto-fill to username in subscribtion page
+
+Changed userLOGIN.html to userLOGIN.php
+Changed all userLOGIN.html to userLOGIN.php
+* Added redirect to login message
+
+Changed user Login notifications
+Added new styling to notifications
+* Added new notification to User Login Page
+
+[To Be Added: Add the rest of the notifications]
+
+Session[3]-05-08:
+Changed userRegister.html to .php
+Changed all userRegister.html to .php
+* Applied notification system to User Registration.
+* Applied Unique to username in user table
+! Expert Login button is not responsive[Solved= Javascript disabling the login button]
+
+
+Changed expertLOGIN.html to .php
+Changed all expertLOGIN.html to .php
+
+
+Changed expertRegister.html to .php
+Changed all expertRegister.html to .php
+
+* Added the rest of the notifications.
+* Changed expert Name to Unique
+[To be Added: Redirect expert to expert profile not index.php]
+
+! Notification is not displaying on index.php [Solved= Changed the position of it i.e. nav bar] in session [4] 05-09
+
+
+
+
+
+
+
