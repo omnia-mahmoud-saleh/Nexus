@@ -27,14 +27,14 @@
                     //Notify User
                 echo "<script>
                         alert('Your subscription was successful. We will contact you soon.');
-                        window.location.href = '../index.html';
+                        window.location.href = '../index.php';
                         </script>";
                         exit();
             }
             else {
                 echo "<script>
                         alert('Subscription failed. Please check your details and try again.');
-                        window.location.href = '../subscribe.html';
+                        window.location.href = '../subscribe.php';
                         </script>";
                         exit();
            }

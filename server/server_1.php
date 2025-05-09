@@ -1,5 +1,7 @@
 <?php include('databaseconn.php')?>
 <?php
+    //Start a session
+    session_start();
     //Registration button Expert
     if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['button_submit_expert'])){
         //Input sanitization
@@ -43,19 +45,27 @@
             '$pdf_name', 
             '$file_path')";
             //Execute Query
-            mysqli_query($conn, $stmt);
-            //Notify User
-            echo "<script>
-                        alert('Profile has been successfully created.');
-                        window.location.href = '../index.html';
-                    </script>";
+            try{
+                mysqli_query($conn, $stmt);
+                //To Display a user-friendly notification
+                $_SESSION["message"] = "Registration Successful!";
+                $_SESSION["message_type"] = "success";
+                header("Location: ../expertLOGIN.php");
                 exit();
+            }
+            catch(mysqli_sql_exception){
+                //To Display a user-friendly notification
+                $_SESSION["message"] = "Registration Unsuccessful. Username already taken.";
+                $_SESSION["message_type"] = "error";
+                header("Location: ../expertRegister.php");
+                exit();
+            }
         }
         else {
-            echo "<script>
-                        alert('Error moving the file.');
-                        window.location.href = '../expertRegister.html';
-                    </script>";
+            //To Display a user-friendly notification
+            $_SESSION["message"] = "Error Moving the file.";
+            $_SESSION["message_type"] = "error";
+            header("Location: ../expertRegister.php");
                 exit();
         }
     }
@@ -74,26 +84,25 @@
                 $stored_hash = $assoc['Password'];
                 //Comparing hash value with password
                 if(password_verify($expert_password, $stored_hash)){
-                    echo "<script>
-                        alert('Logged in Successfully');
-                        window.location.href = '../index.html';
-                    </script>";
+                    //To Display a user-friendly notification
+                    $_SESSION["message"] = "Logged In Successfully!";
+                    $_SESSION["message_type"] = "success";
+                    header("Location: ../index.php");
                 exit();
                 }
                 else{
-                    echo "<script>
-                        alert('Incorrect Password');
-                        window.location.href = '../expertLOGIN.html';
-                    </script>";
-                exit();
+                     //To Display a user-friendly notification 
+                     $_SESSION["message"] = "Incorrect Password";
+                     $_SESSION["message_type"] = "error";
+                     header("Location: ../expertLOGIN.php");
+                 exit();
                 }
             }
         }
         else{
-            die("<script>
-                   alert('No User Found or Incorrect username / password');
-                   window.location.href = '../expertLOGIN.html';
-                 </script>");
+            $_SESSION["message"] = "No User Found or Incorrect username / password";
+            $_SESSION["message_type"] = "error";
+            header("Location: ../expertLOGIN.php");
         }
 
     }
@@ -123,21 +132,39 @@
         '$user_email', 
         '$hash')";
         //Execute Query
-        if(mysqli_query($conn, $stmt)){
-            echo "<script>
-                        alert('Registration Successful');
-                        window.location.href = '../index.html';
-                    </script>";
+        try{
+            mysqli_query($conn, $stmt);
+            //To Display a user-friendly notification
+            $_SESSION["message"] = "Registration Successful!";
+            $_SESSION["message_type"] = "success";
+            header("Location: ../userLOGIN.php");
                 exit();
-            //header("location: http://localhost/Grad_Project/Ai-Tools/userLOGIN.html");
+            //header("location: http://localhost/Grad_Project/Ai-Tools/userLOGIN.php");
         }
-        else{
-            echo "<script>
-                        alert('Registration Unsuccessful');
-                        window.location.href = '../userRegister.html';
-                    </script>";
+        catch(mysqli_sql_exception){
+            //To Display a user-friendly notification
+            $_SESSION["message"] = "Username already taken. Please try again.";
+            $_SESSION["message_type"] = "error";
+            header("Location: ../userRegister.php");
                 exit();
             }
+        // //Execute Query
+        // if(mysqli_query($conn, $stmt)){
+        //     //Changed redirection to userLOGIN.php page
+        //     //To Display a user-friendly notification
+        //     $_SESSION["message"] = "Registration Successful!";
+        //     $_SESSION["message_type"] = "success";
+        //     header("Location: ../userLOGIN.php");
+        //         exit();
+        //     //header("location: http://localhost/Grad_Project/Ai-Tools/userLOGIN.php");
+        // }
+        // else{
+        //     //To Display a user-friendly notification
+        //     $_SESSION["message"] = "Registration Unsuccessful. Please try again.";
+        //     $_SESSION["message_type"] = "error";
+        //     header("Location: ../userRegister.php");
+        //         exit();
+        //     }
 
     }
 
@@ -154,26 +181,30 @@
             while($assoc = mysqli_fetch_assoc($result)){
                 $stored_hash = $assoc['Password'];
                 if(password_verify($user_password, $stored_hash)){
-                    echo "<script>
-                        alert('Logged in Successfully');
-                        window.location.href = '../index.html';
-                    </script>";
+                    //Declaring a super variable (To indicate logged-in status for the user)
+                    $_SESSION["user_logged_in"] = true;
+                    //Declaring another super var to store username
+                    $_SESSION["user_name"] = $username;
+                    //To Display a user-friendly notification
+                    $_SESSION["message"] = "Logged In Successfully!";
+                    $_SESSION["message_type"] = "success";
+                    header("Location: ../index.php");
                 exit();
                 }
-                else{ 
-                    echo "<script>
-                        alert('Incorrect Password');
-                        window.location.href = '../userLOGIN.html';
-                    </script>";
+                else{
+                    //To Display a user-friendly notification 
+                    $_SESSION["message"] = "Incorrect Password";
+                    $_SESSION["message_type"] = "error";
+                    header("Location: ../userLOGIN.php");
                 exit();
                 }
             }
         }
         else{
-            die("<script>
-                   alert('No User Found or Incorrect username / password');
-                   window.location.href = '../userLOGIN.html';
-                 </script>");
+            //To Display a user-friendly notification
+            $_SESSION["message"] = "No User Found or Incorrect username / password";
+            $_SESSION["message_type"] = "error";
+            header("Location: ../userLOGIN.php");
         }
     }
     mysqli_close($conn);
