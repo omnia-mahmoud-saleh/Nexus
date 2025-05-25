@@ -1,5 +1,14 @@
 <!--Establish Database Connection -->
 <?php include('../../../server/databaseconn.php')?>
+<?php
+session_start();
+
+// Check if admin is logged in, else redirect to login page
+if (!isset($_SESSION['admin_logged_in'])) {
+    header('Location: ../admin_login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +83,7 @@
         mysqli_close($conn);
     ?>
     <br>
-    <button><a href="../index.html">Go Home</a></button>
+    <button><a href="../dashboard.php">Go Home</a></button>
     <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
