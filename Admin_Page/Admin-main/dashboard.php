@@ -52,11 +52,14 @@ if (!isset($_SESSION['admin_logged_in'])) {
                 <i class="fa-solid fa-folder"></i>
                 <h1>CATEGORIES</h1>
             </div>
+<<<<<<< HEAD
             <!--For adding tools for each category [under construction] -->
             <div class="tools" id="box" onclick="location.href='./server/tools.php';">
                 <i class="fa-solid fa-tools"></i>
                 <h1>TOOLS</h1>
             </div>
+=======
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
             </div>
         </div>
     </div>

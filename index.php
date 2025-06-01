@@ -1,4 +1,5 @@
 <?php session_start();?>
+<<<<<<< HEAD
 <!--New addition -->
 <?php 
     include('server/databaseconn.php');
@@ -6,11 +7,18 @@
     $result = $conn->query($sql);?>
 <!-- -->
 <!DOCTYPE html> 
+=======
+<!DOCTYPE html>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>CONNEX</title>
+=======
+    <title>AI Nexus</title>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
     <link rel="icon" href="./assets/imgs/pexels-fwstudio-33348-129733.jpg">
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/icons/all.min.css">
@@ -33,7 +41,11 @@
                     <div class="col-lg-5 col-md-5 d-flex" id="nav0-content2"  >
                         <p>
                           <!-- To Display a notification to user-->
+<<<<<<< HEAD
                           <?php 
+=======
+                          <?php
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
                           if (isset($_SESSION['message'])) {
                               // $type = $_SESSION['message_type']; // success, error, etc.
                               echo "{$_SESSION['message']}";
@@ -55,7 +67,11 @@
         </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
+<<<<<<< HEAD
               <a class="navbar-brand" href="#">CONNEX</a>
+=======
+              <a class="navbar-brand" href="#">AI Nexus</a>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -104,6 +120,7 @@
               </div> 
             </div>
           </div>
+<<<<<<< HEAD
             <section class="sec-1" id="ourtools">
               <div class="container" id="all-boxes">
                 <div class="d-lg-flex flex-wrap justify-content-center gap-4">
@@ -118,6 +135,30 @@
                 </div>
               </div>
             </section>
+=======
+
+         <section class="sec-1" id="ourtools">
+          <div class="container" id="all-boxes">
+          
+              <div class="d-lg-flex d-sm-block" id="row-1">
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="tools.html"><i class="fa-solid fa-brain"></i><br>AI Tools</a> </div>
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="innermiroc.html"><i class="fa-brands fa-windows"></i><br>Microsoft Office</a> </div>
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="analysis.html"><i class="fa-solid fa-magnifying-glass-chart"></i><br>System Analysis</a> </div>
+              </div>
+
+              <div class="d-lg-flex d-sm-block" id="row-2">
+                <div class="col-lg-6 col-sm-10 ai-box"><a href="management.html"><i class="fa-solid fa-people-roof"></i><br>Project Management</a> </div>
+                <div class="col-lg-6 col-sm-10 ai-box"><a href="./mobileApp.html"><i class="fa-solid fa-mobile-screen-button"></i><br>Mobile Application</a> </div>
+              </div>
+
+              <div class="d-lg-flex d-sm-block" id="row-3">
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="webApplication.html"><i class="fa-solid fa-laptop"></i><br>Web Application</a> </div>
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="./UiUX.html"><i class="fa-solid fa-palette"></i><br>UI/UX</a> </div>
+                <div class="col-lg-4 col-sm-10 ai-box"><a href="./cybersecurity.html"><i class="fa-solid fa-user-lock"></i><br>Cyber-Security</a> </div>
+              </div>
+          </div>
+         </section>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
 
          <!-- Footer -->
          <div class="section10">
@@ -172,5 +213,9 @@
      <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
      <script src="./js/main.js"></script>
 </body>
+<<<<<<< HEAD
 </html>
 <?php $conn->close(); ?>
+=======
+</html>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256

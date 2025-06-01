@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="./assets/icons/all.min.css">
     <link rel="stylesheet" href="./css/login.css">
 </head>
+<<<<<<< HEAD
 <body> 
+=======
+<body>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
   <!--To Display a user-friendly notification -->
   <?php
     if (isset($_SESSION['message'])) {

@@ -1,9 +1,14 @@
 <?php session_start();?>
+<<<<<<< HEAD
 <?php include('server/databaseconn.php');
   $tools_result = $conn->query("SELECT Tool_ID, Name FROM tool");
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
+=======
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +16,7 @@
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/icons/all.min.css">
     <link rel="stylesheet" href="./css/login.css">
+<<<<<<< HEAD
 <!-- For the multi-select tools section-->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -20,6 +26,8 @@
 </script>
 
 
+=======
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
 </head>
 <body>
   <!--To Display a user-friendly notification -->
@@ -37,7 +45,11 @@
   <!-- <h1>AI Nexus</h1> -->
   <div class="hero2">
     <h1 class="ms-5">
+<<<<<<< HEAD
       Expert Registration
+=======
+      Expert Registeration
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
    </h1>
     <!-- <button> <a href="index.php">Back to home page</a></button> -->
   </div>
@@ -57,6 +69,7 @@
                     <input type="email" placeholder="Email" class=" col-lg-4 col-sm-12  mb-3 ms-3" id="regist-expertemail" name="expert_email" required>
                   </div>
                   <div class="d-lg-flex d-sm-inline" id="consult-input">
+<<<<<<< HEAD
                     <div class="col-lg-4 col-sm-12 mb-3 me-3">
                     <select name="expert_gender" class="form-control" required>
                        <option value="" disabled selected>Select Gender</option>
@@ -85,6 +98,14 @@
                   <!-- <div class="d-lg-flex d-sm-inline" id="consult-input">
                     <textarea class="col-lg-8 col-sm-12  mb-3" id="availability" name="availability" placeholder="Available Schedule"></textarea>
                   </div> -->
+=======
+                    <textarea placeholder="discription" class="col-lg-8 col-sm-12  mb-3" id="expert_discription" name="expert_discription" required></textarea>
+                  </div>
+
+                  <div class="d-lg-flex d-sm-inline" id="consult-input">
+               <textarea class="col-lg-8 col-sm-12  mb-3" id="availability" name="availability" placeholder="Avaliable Scheduale"></textarea>
+                  </div>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
 
                   <div class="d-lg-block d-sm-inline" id="cv">
                     <label class=" justify-content-center ms-3 cv-input">Upload Your CV</label>
@@ -101,6 +122,7 @@
     </div>
 </body>
 </body>
+<<<<<<< HEAD
 </html>
 <!--A Script to support the multi-select section for tools selection -->
 <script>
@@ -112,3 +134,6 @@
     });
   });
 </script>
+=======
+</html>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256

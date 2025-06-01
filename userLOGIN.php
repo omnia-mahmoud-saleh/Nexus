@@ -38,7 +38,11 @@
             </div>
               <button type="submit"id="userLogin" name="button_login_user"> Log In</button> <br><br>
               <a href="userRegister.php" class="regist-link"> you don't have an account? Register</a><br>
+<<<<<<< HEAD
               <a href="./expertLOGIN.php" class="regist-link"> you are an expert? Login</a>
+=======
+              <a href="./expertLOGIN.php" class="regist-link"> you are an expert? Register</a>
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
           </div>
         </form>
       </section>

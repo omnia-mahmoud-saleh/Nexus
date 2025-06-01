@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+<<<<<<< HEAD
     <!--To Display a user-friendly notification -->
   <?php
     if (isset($_SESSION['message'])) {
@@ -20,6 +21,8 @@
     }
   ?>
 
+=======
+>>>>>>> 19fc9b1f51e7babe1c1fd18d699470d9dedf6256
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
